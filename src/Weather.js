@@ -12,7 +12,7 @@ export default function Weather (){
     }
 
     function openWeatherInfo (event) {
-
+        event.preventDefault();
         let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=5d7a48c45799df1cd3a05ecee722cc4e&units=metric`;
         axios.get(url).then(displayInfo);
     }
